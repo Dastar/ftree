@@ -12,13 +12,14 @@ HDR = $(wildcard *.hpp)
 .PHONY: test
 test : $(SRC) $(HDR)
 	@echo "-------------New Compiling-------------"
-	@$(CPPCHECK) $(SRC) $(HDR)
-	@echo
-	@echo "Compiling ..."
+	#@$(CPPCHECK) $(SRC) $(HDR)
+	#@echo
+	#@echo "Compiling ..."
 	@$(CXX) $(CXXFLAGS) -o test.out $(SRC)
 	@echo
 	@echo "Testing ..."
-	@$(VLG) test.out
+	#@$(VLG) test.out
+	@./test.out
 	@echo "----------------Finite-----------------"
 
 .PHONY: release
